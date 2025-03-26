@@ -5,8 +5,8 @@ public class app{
   public static void main(String[]args){
     // Declaraciond de variables
   String nombreArchivo = "configuracion.txt";
-    File archivo = new File(configFilePath);
-    if (configFile.exist()){
+    File archivo = new File(nombreArchivo);
+    if (archivo.exist()){
       System.out.println("El archivo configuracion ya exixte");
       return;}else{
       try {
