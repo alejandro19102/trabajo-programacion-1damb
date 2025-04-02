@@ -1,12 +1,15 @@
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
-
+import java.util.Scanner;
+/**
+ * Programa Main para Juego de plataformas.
+ * Incluye la creación de directorios, archivos de escenarios y almacenamiento de datos del usuario.
+ *
+ * @author Alejandro
+ * @author Guillermo
+ * 
+ */
 public class App {
     // Función main
     public static void main(String[] args) {
@@ -38,6 +41,9 @@ public class App {
                 System.out.println("Error al crear el archivo: " + e.getMessage());
             }
         }
+
+        // Solicitar y guardar datos del usuario
+        guardarDatosUsuario();
 
         // Cargar y mostrar el escenario
         cargarEscenario("escenario/escenario1.txt");
@@ -72,7 +78,7 @@ public class App {
         }
     }
 
-    // Función para crear un escenario con obstáculos 
+    // Función para crear un escenario con obstáculos
     private static void crearEscenarioConObstaculos(String nombreArchivo) {
         File archivo = new File(nombreArchivo);
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(archivo))) {
@@ -80,19 +86,19 @@ public class App {
             int columnas = 20;
             writer.write(filas + " " + columnas);
             writer.newLine();
-            
-            String[] mapa = { //escenario que se carga
-                "####################",
-                "#       ##        #",
-                "#  ####  ##  #### #",
-                "#       ##        #",
-                "##### ###### #####",
-                "#       ##        #",
-                "#  ####  ##  #### #",
-                "#       ##        #",
-                "####################"
+
+            String[] mapa = {
+                    "####################",
+                    "#       ##        #",
+                    "#  ####  ##  #### #",
+                    "#       ##        #",
+                    "##### ###### #####",
+                    "#       ##        #",
+                    "#  ####  ##  #### #",
+                    "#       ##        #",
+                    "####################"
             };
-            
+
             for (String linea : mapa) {
                 writer.write(linea);
                 writer.newLine();
@@ -129,6 +135,29 @@ public class App {
         System.out.println("Escenario cargado desde " + nombreArchivo + ":");
         for (String linea : escenario) {
             System.out.println(linea);
+        }
+    }
+
+    // Función para pedir al usuario el nombre de usuario y email y guardar los datos en un fichero .txt
+    private static void guardarDatosUsuario() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Introduce tu nombre de usuario: ");
+        String nombreUsuario = scanner.nextLine();
+        System.out.print("Introduce tu email: ");
+        String email = scanner.nextLine();
+
+        String rutaArchivo = "jugador/datos_usuario.txt";
+        File archivo = new File(rutaArchivo);
+
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(archivo))) {
+            writer.write("Nombre de usuario: " + nombreUsuario);
+            writer.newLine();
+            writer.write("Email: " + email);
+            writer.newLine();
+            System.out.println("Datos guardados en " + rutaArchivo);
+        } catch (IOException e) {
+            System.err.println("Error al guardar los datos del usuario en " + rutaArchivo);
+            e.printStackTrace();
         }
     }
 }
