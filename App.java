@@ -112,6 +112,17 @@ public class App {
         }
     }
 
+    // Funcion para itroducir un escenario y que inserte el muñeco del usuario
+    private static void insertarJugador(List <String> escenario){
+        if (esccenario.size() > 1){
+            String  linea = escenario.get(1);
+            if(linea.length() >1){
+                String nuevaLinea = linea.substring(0,1)+"☠️"+ linea.substring(2);
+                escenario.set(1, nuevaLinea);
+            }
+        }
+    }
+
     // Función para cargar y mostrar un escenario
     private static void cargarEscenario(String nombreArchivo) {
         File archivo = new File(nombreArchivo);
