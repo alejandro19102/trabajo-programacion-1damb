@@ -2,14 +2,14 @@
 import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
 import model.Escenario;
-
+// clase que controla los movimientos del jugador asi como el cargar los archivos
 public class Controlador {
-    @FXML private TextArea mapaTextArea;
+    @FXML private TextArea mapaTextoArea;
 
     private Escenario escenario;
 
     @FXML
-    public void initialize() {
+    public void incializar() {
         try {
             escenario = new Escenario("escenario/escenario1.txt");
             actualizarVista();
