@@ -12,7 +12,7 @@ public class App extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         try {
-            // Usar una ruta absoluta al archivo FXML
+            // Usar una ruta al archivo FXML
             File fxmlFile = new File("out/view/Juego.fxml"); // Asegúrate de que el archivo se copie a esta ruta
             if (!fxmlFile.exists()) {
                 System.out.println("No se encontró el archivo FXML: " + fxmlFile.getAbsolutePath());
