@@ -15,16 +15,16 @@ public class App extends Application {
             // Usar una ruta al archivo FXML
             File archivo = new File("out/view/Juego.fxml"); // Asegúrate de que el archivo se copie a esta ruta
             if (!archivo.exists()) {
-                System.out.println("No se encontró el archivo FXML: " + fxmlFile.getAbsolutePath());
+                System.out.println("No se encontró el archivo FXML: " + archivo.getAbsolutePath());
                 return;
             }
 
             // Cargar el archivo FXML
-            FXMLLoader loader = new FXMLLoader(fxmlFile.toURI().toURL());  // Usamos la URL desde el archivo
+            FXMLLoader cargador = new FXMLLoader(fxmlFile.toURI().toURL());  // Usamos la URL desde el archivo
             Scene escena = new Scene(loader.load());
-            primaryStage.setTitle("Juego de Plataforma");
-            primaryStage.setScene(escena);
-            primaryStage.show();
+            escena.setTitle("Juego de Plataforma");
+            escena.setScene(escena);
+            escena.show();
 
         } catch (IOException e) {
             System.err.println("Error al cargar el archivo FXML: " + e.getMessage());
