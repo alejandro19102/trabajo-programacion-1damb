@@ -2,7 +2,7 @@
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
-
+// Esta clase se encarga de cargar los archivos necesarios y la interaccion en pantalla con el jugador
 public class Modelo {
     private List<String> mapa = new ArrayList<>();
     private int jugadorFila = 1;
