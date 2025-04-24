@@ -47,7 +47,7 @@ public class Modelo {
         }
     }
 
-    private String reemplazarCaracter(String linea, int indice, char nuevoCaracter) {
+    private String reemplazarJugador(String linea, int indice, char nuevoCaracter) {
         StringBuilder nuevaLinea = new StringBuilder(linea);
         nuevaLinea.setCharAt(indice, nuevoCaracter);
         return nuevaLinea.toString();
