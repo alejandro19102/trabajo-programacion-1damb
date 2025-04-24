@@ -13,17 +13,17 @@ public class App extends Application {
     public void start(Stage primaryStage) throws Exception {
         try {
             // Usar una ruta al archivo FXML
-            File fxmlFile = new File("out/view/Juego.fxml"); // Asegúrate de que el archivo se copie a esta ruta
-            if (!fxmlFile.exists()) {
+            File archivo = new File("out/view/Juego.fxml"); // Asegúrate de que el archivo se copie a esta ruta
+            if (!archivo.exists()) {
                 System.out.println("No se encontró el archivo FXML: " + fxmlFile.getAbsolutePath());
                 return;
             }
 
             // Cargar el archivo FXML
             FXMLLoader loader = new FXMLLoader(fxmlFile.toURI().toURL());  // Usamos la URL desde el archivo
-            Scene scene = new Scene(loader.load());
+            Scene escena = new Scene(loader.load());
             primaryStage.setTitle("Juego de Plataforma");
-            primaryStage.setScene(scene);
+            primaryStage.setScene(escena);
             primaryStage.show();
 
         } catch (IOException e) {
