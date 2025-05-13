@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<VBox spacing="10" xmlns:fx="http://javafx.com/fxml" fx:controller="controller.JuegoController">
+    <TextArea fx:id="mapaTextArea" prefRowCount="15" prefColumnCount="30" editable="false"/>
+    <HBox spacing="10">
+        <Button text="W" onAction="#moverArriba"/>
+        <Button text="A" onAction="#moverIzquierda"/>
+        <Button text="S" onAction="#moverAbajo"/>
+        <Button text="D" onAction="#moverDerecha"/>
+    </HBox>
+</VBox>
