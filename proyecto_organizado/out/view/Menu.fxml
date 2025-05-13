@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controlador.MenuController"
+      alignment="CENTER" spacing="10">
+  <children>
+    <Label fx:id="mensajeLabel" text="Menú Principal"/>
+    <Button text="Jugar"            onAction="#iniciarJuego"/>
+    <Button text="Ver Puntuaciones" onAction="#mostrarRanking"/>
+    <Button text="Salir"            onAction="#salir"/>
+  </children>
+</VBox>

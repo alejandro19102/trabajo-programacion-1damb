@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.TextArea?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controlador.Controlador"
+            focusTraversable="true">
+  <children>
+    <TextArea fx:id="mapaTextoArea"
+              AnchorPane.topAnchor="14.0"
+              AnchorPane.leftAnchor="14.0"
+              AnchorPane.rightAnchor="14.0"
+              AnchorPane.bottomAnchor="14.0"
+              prefWidth="480.0"
+              prefHeight="360.0"
+              editable="false"
+              focusTraversable="true"
+              onKeyPressed="#handleKeyPress"/>
+  </children>
+</AnchorPane>

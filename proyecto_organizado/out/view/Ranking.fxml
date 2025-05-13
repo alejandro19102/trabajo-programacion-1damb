@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.Button?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controlador.RankingController"
+      alignment="CENTER" spacing="10">
+  <children>
+    <Label text="Ranking Top 10"/>
+    <TableView fx:id="rankingTable" prefWidth="400" prefHeight="300">
+      <columns>
+        <TableColumn fx:id="playerColumn" text="Jugador"/>
+        <TableColumn fx:id="scoreColumn"  text="Puntuación"/>
+      </columns>
+    </TableView>
+    <Button text="Volver" onAction="#volverMenu"/>
+  </children>
+</VBox>

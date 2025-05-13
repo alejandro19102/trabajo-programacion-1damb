@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controlador.LoginController"
+      alignment="CENTER" spacing="10">
+  <children>
+    <Label text="Iniciar Sesión"/>
+    <TextField fx:id="usuarioField" promptText="Usuario"/>
+    <TextField fx:id="emailField"   promptText="Correo electrónico"/>
+    <Label fx:id="mensajeLabel" textFill="red"/>
+    <Button text="Login" onAction="#handleLogin"/>
+  </children>
+</VBox>
